@@ -18,3 +18,6 @@ This project is a website for a marble shop, where users can browse and purchase
 4. Open your browser and navigate to `http://localhost:3000` to view the website.
 
 Feel free to contribute to this project by submitting pull requests or reporting issues!
+![Uploading boatStone.jpg…]()
+![durga2](https://github.com/giteadi/Marble-Shop-Website/assets/131639817/365b36e8-2581-41aa-b475-310846221e1a)
+![Uploading boatStone.jpg…]()
