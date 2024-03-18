@@ -1,13 +1,16 @@
 const dbConnection = require('./config/dbConnection');
 const Routs=require("./routes/shopRoutes");
+const cors = require('cors');
 
 const express = require("express");
 require("dotenv").config();
 
 const app = express();
 
-app.use(express.json());
+// middlewares
 
+app.use(express.json());
+app.use(cors());
 dbConnection(); 
 
 // mounting

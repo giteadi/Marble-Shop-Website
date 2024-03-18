@@ -1,4 +1,4 @@
-const register =require("../controllers/login");
+const {register,login}=require("../controllers/login")
 
 
 const express=require("express");
@@ -6,5 +6,6 @@ const router=express.Router();
 
 
 router.post('/register',register);
+router.post("/login",login);
 
 module.exports=router;
