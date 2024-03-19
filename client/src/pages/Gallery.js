@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import GalleryCard from './GalleryCard';
 import ganesh from '../imageData/ganesh';
+import '../css/home.css';
+import Carousel from '../components/Carousal';
 export default function Gallery() {
     const [selectedItem, setSelectedItem] = useState(null);
 
@@ -9,7 +11,24 @@ export default function Gallery() {
     };
 
     return (
-        <div className="container px-4 py-8 mx-auto">
+       <div>
+          {/* Heading */}
+     <div className='flex items-center justify-center '>
+      <h1 className='animate-charcter'>VISHNU HAST KALA KENDRA</h1>
+     </div>
+           {/* LOWER HEADING */}
+           <div className=' lowerHeading'>
+           <p className='text-2xl font-bold '>Welcome to your Shop where we  <span className='font-bold'>shape your</span></p><div className="variable">
+          <span class="work text-2xl">Imagination</span>
+           </div>
+           <div class="static"><span className='text-5xl '>To</span>Reality</div>
+           </div>
+
+            {/* CARAUSAL */}
+            <div className='flex flex-wrap items-center justify-center pl-16 overflow-hidden '>
+            <Carousel/>
+            </div>
+         <div className="container px-4 py-8 mx-auto">
             <h1 className="mb-8 text-3xl font-bold">Gallery</h1>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {ganesh.map(item => (
@@ -31,5 +50,6 @@ export default function Gallery() {
                 </div>
             )}
         </div>
+       </div>
     );
 }
