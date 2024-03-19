@@ -4,9 +4,9 @@ import Sign from './pages/Sign';
 import {Routes,Route} from 'react-router-dom';
 import Nav2 from "./components/Nav2";
 import Contact from "./pages/Contact";
-import Gallery from "./pages/Gallery";
 import Blogs from "./pages/Blogs";
 import About from "./pages/About";
+import Gallery from "./pages/Gallery";
 function App() {
   return (
     <div>
