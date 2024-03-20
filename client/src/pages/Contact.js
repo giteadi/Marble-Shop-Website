@@ -3,14 +3,11 @@ import React from 'react';
 import Carousel from '../components/Carousal';
 export default function Contact() {
   return (
-    
-      
           <div className="flex flex-wrap justify-around w-full bg-white rounded-lg shadow-md item-center">
              {/* Heading */}
      <div className='flex items-center justify-center '>
       <h1 className='animate-charcter'>VISHNU HAST KALA KENDRA</h1>
-     </div>
-          
+     </div>  
               <div className='w-[600px]'>
               <h2 className="mb-6 text-2xl font-bold">Contact Us</h2>
             <form>
