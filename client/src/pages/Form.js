@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {toast} from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -7,19 +7,34 @@ const ContactForm = () => {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
 
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-   
-    setTimeout(() => {
-   
-      toast.success('Message sent successfully');
-      // Reset form fields
-      setName('');
-      setEmail('');
-      setPhone('');
-      setMessage('');
-    }, 2000);
+
+    try {
+      const response = await fetch('http://localhost:4000/api/v1/formSubmit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, phone, message }),
+      });
+
+      const data = await response.json(); // Parse the JSON response
+
+      if (response.ok) {
+        toast.success(data.message); // Show success message from the response
+        // Reset form fields
+        setName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
+      } else {
+        toast.error(data.message); // Show error message from the response
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast.error('Failed to send message');
+    }
   };
 
   return (
