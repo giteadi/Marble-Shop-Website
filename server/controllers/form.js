@@ -7,12 +7,12 @@ const form = async (req, res) => {
         return res.status(400).json({ errors: errors.array() });
     }
 
-    const { name, email, message } = req.body;
+    const { name, email, message,phone } = req.body;
 
     try {
         const pool = await getPool(); // Call the exported function to get the pool
         const connection = await pool.getConnection();
-        await connection.query('INSERT INTO formData (name, email, message) VALUES (?, ?, ?)', [name, email, message]);
+        await connection.query('INSERT INTO formData (name, email, message,phone) VALUES (?, ?, ?,?)', [name, email, message,phone]);
         connection.release();
         return res.status(201).json({ message: 'Form data saved successfully' });
     } catch (err) {

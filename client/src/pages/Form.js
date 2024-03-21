@@ -38,6 +38,7 @@ const ContactForm = () => {
   };
 
   return (
+   
     <div className="max-w-lg p-6 mx-auto mt-10 bg-gray-100 rounded-lg shadow-lg">
       <h2 className="mb-6 text-2xl font-bold">Contact Us</h2>
       <form onSubmit={handleSubmit}>
@@ -97,6 +98,8 @@ const ContactForm = () => {
         </button>
       </form>
     </div>
+   
+    
   );
 };
 
