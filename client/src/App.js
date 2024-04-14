@@ -7,6 +7,7 @@ import Form from './pages/Form';
 import Blogs from "./pages/Blogs";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
+import Navbar from "./components/Nav"
 function App() {
   return (
     <div>
