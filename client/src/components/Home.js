@@ -52,10 +52,10 @@ function HomePage() {
   {
     imageData.map((item) => (
       <Card
-        key={item.title} 
+        // key={item.title} 
         image={item.url}
-        price={item.price}
-        size={item.size}
+        // price={item.price}
+        // size={item.size}
         description={item.description}
       />
     ))

@@ -9,7 +9,7 @@ function Nav2() {
     <div id='Nav2div'>
       <nav className="nav">
         <input id="menu" type="checkbox" />
-        <label htmlFor="menu">Click me</label>
+        <label htmlFor="menu">Menu</label>
         <ul className="menu">
           <li>
             <a href='/about'>
@@ -34,8 +34,15 @@ function Nav2() {
               <i className="fas fa-envelope-open-text" aria-hidden="true"></i>
             </a>
           </li>
+          
         </ul>
+       
       </nav>
+      <div className='relative rounded-full bg-slate-500'>
+          <button onClick={(()=>{
+            nav("/");
+          })}>Home</button>
+        </div>
     </div>
   );
 }
