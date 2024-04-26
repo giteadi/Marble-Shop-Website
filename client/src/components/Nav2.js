@@ -1,7 +1,7 @@
 import React from 'react';
 import './Nav2.css';
 import { useNavigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 function Nav2() {
   const nav = useNavigate();
   
@@ -12,37 +12,33 @@ function Nav2() {
         <label htmlFor="menu">Menu</label>
         <ul className="menu">
           <li>
-            <a href='/about'>
+            <Link to='/about'>
               <span className='text-black'>About</span> 
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/gallery">
+            <Link to="/gallery">
               <span>Gallery</span>
               <i className="fas fa-tasks" aria-hidden="true"></i>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/blogs">
+            <Link to="/blogs">
               <span>Blogs</span>
               <i className="fas fa-users" aria-hidden="true"></i>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/contact">
+            <Link to="/contact">
               <span>Contact</span>
               <i className="fas fa-envelope-open-text" aria-hidden="true"></i>
-            </a>
+            </Link>
           </li>
-          
         </ul>
-       
       </nav>
       <div className='relative rounded-full bg-slate-500'>
-          <button onClick={(()=>{
-            nav("/");
-          })}>Home</button>
-        </div>
+        <button onClick={() => nav("/")}>Home</button>
+      </div>
     </div>
   );
 }

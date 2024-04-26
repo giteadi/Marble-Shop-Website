@@ -6,6 +6,7 @@ export default function GalleryCard({ imageUrl, itemName, price, description, on
                 <p className="text-lg font-semibold">{itemName}</p>
                 <p className="text-gray-500">{description}</p>
                 <p className="text-gray-500">{size}</p>
+                <p>{price}</p>
             </div>
         </div>
     );

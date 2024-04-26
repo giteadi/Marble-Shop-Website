@@ -39,7 +39,7 @@ function HomePage() {
       <br />
       <br />
       {/* Hero Section */}
-      <div className="flex items-center justify-around text-2xl transition ease-in-out delay-300 rounded-3xl bg-slate-200 hover:bg-slate-300">
+      <div className="flex flex-wrap items-center justify-around text-2xl transition ease-in-out delay-300 rounded-3xl bg-slate-200 hover:bg-slate-300">
         <div className="">
           <img src={radhaKrishna} alt="Jugal_Jodi" id="jugaljodi" />
         </div>
